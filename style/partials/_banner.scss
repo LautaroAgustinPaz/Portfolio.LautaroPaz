@@ -1,0 +1,67 @@
+.background {
+    /* Alturas y Background*/
+    width: 100%;
+    height: 100vh;
+    background: url(../../imgs/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+.background::after {
+    content: "";
+    width: 100%;
+    min-height: 100%;
+    background-color: black;
+    position: absolute; /* -> Un elemento con position: absolute se elimina del flujo normal de documentos. Se posiciona automáticamente en el punto de inicio (top-left esquina) de su elemento padre.*/
+    top: 0;
+    left: 0;
+    }
+
+    .banner-headings {
+        color: rgb(0, 0, 0);
+        width: 100%;
+        border: 1px solid red;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        .banner__h1 {
+            color: rgb(0, 0, 0);
+            font-size: 100px;
+            padding: 10px;
+            font-weight: 70;
+            text-align: center;
+            border: 1px solid rgb(66, 41, 3);
+
+            grid-column: 2/4;
+            grid-row: 1/2;
+
+
+            @include tablet {               // Hay que poner La media querie en el ELEMENTO que queremos
+                font-size: 40px;            // cambiar.
+            }
+        }
+
+        .banner__h4-fe {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            text-align: start;
+
+            border: 1px solid rgb(255, 6, 201);
+        }
+    
+        .banner__h4-lp {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            text-align: end;
+
+            border: 1px solid rgb(89, 0, 253);
+        }
+    }
+}

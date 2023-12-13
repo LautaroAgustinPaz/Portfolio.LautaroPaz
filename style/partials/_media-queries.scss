@@ -1,0 +1,11 @@
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;                       // sirve para cualquier propiedad que este dentro del "include 
+    }                                  // que esta en Sassy usando el mixin "tablet"                          
+}                                     // esta funcion es REUTILIZABLE
+
+@mixin mobile {
+    @media screen and (max-width: 576px) {
+        @content;     
+    }
+}
