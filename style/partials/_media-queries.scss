@@ -1,11 +1,36 @@
-@mixin tablet {
-    @media screen and (max-width: 768px) {
+/* BREAKPOINTS */
+
+/* BASICO */
+@mixin pc-1328px {
+    @media screen and (max-width: 1328px) {
+        @content;     
+    }
+}
+
+/* BASICO */
+@mixin tablet-960px {
+    @media screen and (max-width: 960px) {
         @content;                       // sirve para cualquier propiedad que este dentro del "include 
     }                                  // que esta en Sassy usando el mixin "tablet"                          
 }                                     // esta funcion es REUTILIZABLE
 
-@mixin mobile {
-    @media screen and (max-width: 576px) {
+/* COMPLETO */
+@mixin tablet-768px  {
+    @media screen and (max-width: 768px) {
+        @content;     
+    }
+}
+
+/* BASICO */
+@mixin mobile-480px  {
+    @media screen and (max-width: 480px) {
+        @content;     
+    }
+}
+
+/* PERSONALIZADO */
+@mixin mobile-395px {
+    @media screen and (max-width: 395px) {
         @content;     
     }
 }

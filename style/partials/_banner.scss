@@ -25,43 +25,106 @@
     .banner-headings {
         color: rgb(0, 0, 0);
         width: 100%;
-        border: 1px solid red;
 
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(1fr, 12);
         grid-template-rows: 1fr;
 
         .banner__h1 {
             color: rgb(0, 0, 0);
             font-size: 100px;
-            padding: 10px;
-            font-weight: 70;
-            text-align: center;
-            border: 1px solid rgb(66, 41, 3);
+            padding: 0px 20px 0px 20px;
+            font-weight: 800;
 
-            grid-column: 2/4;
+            grid-column: 1/12;
             grid-row: 1/2;
+            text-align: center;
+            
 
+            @include pc-1328px {
+                font-size: 113px;
+            }
+            
+            @include tablet-960px {               // Hay que poner La media querie en el ELEMENTO que queremos
+                font-size: 87px;            // cambiar.
+            }
 
-            @include tablet {               // Hay que poner La media querie en el ELEMENTO que queremos
-                font-size: 40px;            // cambiar.
+            @include tablet-768px {
+                font-size: 57px;
+            }
+
+            @include mobile-480px {
+                font-size: 45px;  
+            }
+
+            @include mobile-395px {
+                font-size: 35px;
             }
         }
 
         .banner__h4-fe {
-            grid-column: 2/3;
+            grid-column: 4/5;
             grid-row: 2/3;
             text-align: start;
+            font-size: 24px;
+            font-weight: 600;
+            padding: 0px 0px 0px 0px;
 
-            border: 1px solid rgb(255, 6, 201);
+            @include pc-1328px {
+                grid-column: 3/4;
+            }
+            
+            @include tablet-960px {
+                grid-column: 3/4;
+                grid-row: 2/3;
+            }
+
+            @include tablet-768px {
+                grid-column: 4/5;
+                font-size: 20px;
+            }
+
+            @include mobile-480px {
+                grid-column: 3/4;
+                grid-row: 2/3;
+                font-size: 15px;
+            }
+
+            @include mobile-395px {
+                grid-column: 4/5;
+            }
         }
     
         .banner__h4-lp {
-            grid-column: 3/4;
+            grid-column: 8/9;
             grid-row: 2/3;
             text-align: end;
+            font-size: 24px;
+            font-weight: 600;
 
-            border: 1px solid rgb(89, 0, 253);
+            @include pc-1328px {
+                grid-column: 9/10;
+            }
+
+            @include tablet-960px  {
+                grid-column: 9/10;
+                grid-row: 2/3;
+            }
+
+            @include tablet-768px {
+                grid-column: 8/9;
+                font-size: 20px;
+            }
+
+            @include mobile-480px  {
+                grid-column: 9/10;
+                grid-row: 2/3;
+                font-size: 15px;
+            }
+
+            @include mobile-395px {
+                grid-column: 8/9;
+            }
         }
     }
 }

@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/* BREAKPOINTS */
+/* BASICO */
+/* BASICO */
+/* COMPLETO */
+/* BASICO */
+/* PERSONALIZADO */
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
@@ -146,35 +152,114 @@
 .background .banner-headings {
   color: rgb(0, 0, 0);
   width: 100%;
-  border: 1px solid red;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(1fr, 12);
   grid-template-rows: 1fr;
 }
 .background .banner-headings .banner__h1 {
   color: rgb(0, 0, 0);
   font-size: 100px;
-  padding: 10px;
-  font-weight: 70;
-  text-align: center;
-  border: 1px solid rgb(66, 41, 3);
-  grid-column: 2/4;
+  padding: 0px 20px 0px 20px;
+  font-weight: 800;
+  grid-column: 1/12;
   grid-row: 1/2;
+  text-align: center;
+}
+@media screen and (max-width: 1328px) {
+  .background .banner-headings .banner__h1 {
+    font-size: 113px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .background .banner-headings .banner__h1 {
+    font-size: 87px;
+  }
 }
 @media screen and (max-width: 768px) {
   .background .banner-headings .banner__h1 {
-    font-size: 40px;
+    font-size: 57px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .background .banner-headings .banner__h1 {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 395px) {
+  .background .banner-headings .banner__h1 {
+    font-size: 35px;
   }
 }
 .background .banner-headings .banner__h4-fe {
-  grid-column: 2/3;
+  grid-column: 4/5;
   grid-row: 2/3;
   text-align: start;
-  border: 1px solid rgb(255, 6, 201);
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0px 0px 0px 0px;
+}
+@media screen and (max-width: 1328px) {
+  .background .banner-headings .banner__h4-fe {
+    grid-column: 3/4;
+  }
+}
+@media screen and (max-width: 960px) {
+  .background .banner-headings .banner__h4-fe {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .background .banner-headings .banner__h4-fe {
+    grid-column: 4/5;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .background .banner-headings .banner__h4-fe {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 395px) {
+  .background .banner-headings .banner__h4-fe {
+    grid-column: 4/5;
+  }
 }
 .background .banner-headings .banner__h4-lp {
-  grid-column: 3/4;
+  grid-column: 8/9;
   grid-row: 2/3;
   text-align: end;
-  border: 1px solid rgb(89, 0, 253);
+  font-size: 24px;
+  font-weight: 600;
+}
+@media screen and (max-width: 1328px) {
+  .background .banner-headings .banner__h4-lp {
+    grid-column: 9/10;
+  }
+}
+@media screen and (max-width: 960px) {
+  .background .banner-headings .banner__h4-lp {
+    grid-column: 9/10;
+    grid-row: 2/3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .background .banner-headings .banner__h4-lp {
+    grid-column: 8/9;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .background .banner-headings .banner__h4-lp {
+    grid-column: 9/10;
+    grid-row: 2/3;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 395px) {
+  .background .banner-headings .banner__h4-lp {
+    grid-column: 8/9;
+  }
 }/*# sourceMappingURL=estilos.css.map */
