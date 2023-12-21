@@ -5,12 +5,11 @@
 /* COMPLETO */
 /* BASICO */
 /* PERSONALIZADO */
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Source Code Pro", monospace;
 }
 
 .navegation .menu-btn {
@@ -18,15 +17,15 @@
 }
 .navegation .menu-icon {
   position: fixed;
-  top: 25px;
-  right: 30px;
+  top: 15px;
+  right: 27px;
   cursor: pointer;
   padding: 20px 10px;
   z-index: 3;
 }
 .navegation .menu-icon .bar {
-  width: 28px;
-  height: 3px;
+  width: 20px;
+  height: 2px;
   background-color: rgb(0, 0, 0);
   display: block;
   position: relative;
@@ -35,7 +34,7 @@
 .navegation .menu-icon .bar.bar::before {
   content: "";
   width: 28px;
-  height: 3px;
+  height: 2px;
   background-color: rgb(0, 0, 0);
   position: absolute;
   top: -8px;
@@ -45,7 +44,7 @@
 .navegation .menu-icon .bar.bar::after {
   content: "";
   width: 28px;
-  height: 3px;
+  height: 2px;
   background-color: rgb(0, 0, 0);
   position: absolute;
   top: 8px;
@@ -76,10 +75,11 @@
   list-style: none;
 }
 .navegation .menu .ul .li .a {
+  font-family: "Cormorant", serif;
+  font-weight: 500;
   color: #000000;
   display: block;
-  font-size: 40px;
-  font-weight: 800;
+  font-size: 60px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -90,7 +90,7 @@
   content: "";
   width: 0px;
   height: 4px;
-  background-color: rgb(0, 3, 192);
+  background-color: rgb(0, 207, 111);
   position: absolute;
   top: 50%;
   left: -20%;
@@ -157,10 +157,11 @@
   grid-template-rows: 1fr;
 }
 .background .banner-headings .banner__h1 {
+  font-family: "Cormorant", serif;
+  font-weight: 400;
   color: rgb(0, 0, 0);
   font-size: 100px;
   padding: 0px 20px 0px 20px;
-  font-weight: 800;
   grid-column: 1/12;
   grid-row: 1/2;
   text-align: center;
@@ -191,12 +192,12 @@
   }
 }
 .background .banner-headings .banner__h4-fe {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: start;
   grid-column: 4/5;
   grid-row: 2/3;
-  text-align: start;
-  font-size: 24px;
-  font-weight: 600;
-  padding: 0px 0px 0px 0px;
 }
 @media screen and (max-width: 1328px) {
   .background .banner-headings .banner__h4-fe {
@@ -228,11 +229,12 @@
   }
 }
 .background .banner-headings .banner__h4-lp {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: end;
   grid-column: 8/9;
   grid-row: 2/3;
-  text-align: end;
-  font-size: 24px;
-  font-weight: 600;
 }
 @media screen and (max-width: 1328px) {
   .background .banner-headings .banner__h4-lp {

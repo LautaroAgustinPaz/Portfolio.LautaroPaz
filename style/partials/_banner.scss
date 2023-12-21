@@ -12,6 +12,7 @@
     justify-content: center;
     position: relative;
 
+    
 .background::after {
     content: "";
     width: 100%;
@@ -31,10 +32,11 @@
         grid-template-rows: 1fr;
 
         .banner__h1 {
+            font-family: 'Cormorant', serif;
+            font-weight: 400;
             color: rgb(0, 0, 0);
             font-size: 100px;
             padding: 0px 20px 0px 20px;
-            font-weight: 800;
 
             grid-column: 1/12;
             grid-row: 1/2;
@@ -63,12 +65,13 @@
         }
 
         .banner__h4-fe {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            text-align: start;
+            
             grid-column: 4/5;
             grid-row: 2/3;
-            text-align: start;
-            font-size: 24px;
-            font-weight: 600;
-            padding: 0px 0px 0px 0px;
 
             @include pc-1328px {
                 grid-column: 3/4;
@@ -96,11 +99,13 @@
         }
     
         .banner__h4-lp {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            text-align: end;
+
             grid-column: 8/9;
             grid-row: 2/3;
-            text-align: end;
-            font-size: 24px;
-            font-weight: 600;
 
             @include pc-1328px {
                 grid-column: 9/10;
