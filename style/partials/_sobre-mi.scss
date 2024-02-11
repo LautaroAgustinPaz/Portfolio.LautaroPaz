@@ -8,11 +8,12 @@
         display: inline-flex;
         padding-top: 25px;
 
+
         .barra {
             width: 80px;
             height: 1px;
             margin-top: 11px;
-            background-color: rgb(0, 0, 0);
+            background-color: #0D192B;
         }
 
         h5 {
@@ -20,67 +21,99 @@
             font-size: 20px;
             font-weight: 500;
             font-style: italic;
+            color: #0D192B;
 
             padding-left: 13px;
+
         }
     }
 
     .sobre-mi__col-2-3 {
         min-height: 525px;
         display: grid;
-        grid-template-columns: 1.5fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
 
         // INDICE MQ
-        @include tablet-960px  {
+        @include tablet-960px   {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 0.70fr 1fr;
         }
 
         .sobre-mi__2 {
             padding-top: 80px;
             padding-left: 93px;
-            padding-right: 10px;
+            padding-bottom: 50px;
             
             grid-column: 1/2;
             grid-row: 1/2;
 
-            @include tablet-960px  {
+            @include pc-1158px   {
                 grid-column: 1/2;
                 grid-row: 1/2;
+                padding-right: 93px;
             }
             
+            @include tablet-960px   {
+                padding-bottom: 50px;
+            }
 
             & h3 {
-                padding-bottom: 25px;
+                padding-bottom: 30px;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 400;
-                font-size: 48px;
+                font-size: 60px;
+                color: #0D192B;
+
+                display: flex;
+                flex-direction: column;
+
+                @include tablet-960px   {
+                    color: red;
+                }
+
+                @include mobile-480px {
+                    font-size: 48px;
+                }
+
 
                 & span {
-                    font-family: 'Cormorant', serif;
-                    font-weight: 700;
-                    font-size: 48px;
+                    font-family: 'GrandSlang B-Side','Cormorant', serif;
+                    font-weight: 200;
+                    font-size: 60px;
                     font-style: italic;
-                    color: rgb(0, 133, 82);
+                    color: #0D192B;
+
+                    
+                @include tablet-960px   {
+
+                }
+
+                @include mobile-480px {
+                    font-size: 48px;
+                }
+
                 }
             }
 
             p {
                 font-family: 'DM Sans', sans-serif;
                 font-size: 20px;
+                color: #0D192B;
+
+                @include tablet-960px   {
+                    font-size: 20px;
+                }
             }
         }
 
         .sobre-mi__3  {
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            
+            border-radius: 30px 0px 0px 0px;
             grid-column: 2/3;
             grid-row: 1/2;
+            background-color: rebeccapurple;
 
-            @include tablet-960px  {
+            @include tablet-960px {
                 grid-column: 1/2;
                 grid-row: 2/3;
             }

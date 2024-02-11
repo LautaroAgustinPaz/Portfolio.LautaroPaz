@@ -11,31 +11,35 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
     
 .background::after {
     content: "";
     width: 100%;
     min-height: 100%;
-    background-color: black;
+    background-color: #0D192B;
     position: absolute; /* -> Un elemento con position: absolute se elimina del flujo normal de documentos. Se posiciona automáticamente en el punto de inicio (top-left esquina) de su elemento padre.*/
     top: 0;
     left: 0;
     }
 
     .banner-headings {
-        color: rgb(0, 0, 0);
+        color: #0D192B;
         width: 100%;
+        grid-area: banner-headings;
 
         display: grid;
         grid-template-columns: repeat(1fr, 12);
         grid-template-rows: 1fr;
 
+        @include tablet-768px {
+          grid-template-columns: repeat(1fr, 8);
+          grid-template-rows: 1fr;
+        }
+
         .banner__h1 {
-            font-family: 'Cormorant', serif;
+            font-family: 'GrandSlang B-Side','Cormorant', serif;
             font-weight: 400;
-            color: rgb(0, 0, 0);
-            font-size: 100px;
+            font-size: 120px;
             padding: 0px 20px 0px 20px;
 
             grid-column: 1/12;
@@ -55,7 +59,13 @@
             }
 
             @include tablet-768px {
-                font-size: 57px;
+              grid-column: 1/8;
+              grid-row: 1/2;
+              font-size: 70px;
+            }
+
+            @include personalizado-622 {
+              font-size: 50px; 
             }
 
             @include mobile-480px {
@@ -63,7 +73,7 @@
             }
 
             @include mobile-395px {
-                font-size: 35px;
+                font-size: 40px;
             }
         }
 
@@ -90,18 +100,16 @@
             }
 
             @include tablet-768px {
-                grid-column: 4/5;
+                grid-column: 2/3;
                 font-size: 20px;
             }
 
             @include mobile-480px {
-                grid-column: 3/4;
-                grid-row: 2/3;
                 font-size: 15px;
             }
 
             @include mobile-395px {
-                grid-column: 4/5;
+              
             }
         }
     
@@ -129,18 +137,15 @@
             }
 
             @include tablet-768px {
-                grid-column: 8/9;
+                grid-column: 6/7;
                 font-size: 20px;
             }
 
             @include mobile-480px  {
-                grid-column: 9/10;
-                grid-row: 2/3;
                 font-size: 15px;
             }
 
             @include mobile-395px {
-                grid-column: 8/9;
             }
         }
     }

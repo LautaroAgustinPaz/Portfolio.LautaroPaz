@@ -17,7 +17,7 @@
         .bar {
             width: 20px;
             height: 2px;
-            background-color: rgb(0, 0, 0);
+            background-color: #0D192B;
             display: block;
             position: relative;
             transition: all 0.3s ease-out;
@@ -26,7 +26,7 @@
             content: "";
             width: 28px;
             height: 2px;
-            background-color: rgb(0, 0, 0);
+            background-color: #0D192B;
             position:absolute;
             top: -8px;
             left: 0;
@@ -37,7 +37,7 @@
             content: "";
             width: 28px;
             height: 2px;
-            background-color: rgb(0, 0, 0);
+            background-color: #0D192B;
             position:absolute;
             top: 8px;
             left: 0;
@@ -73,11 +73,12 @@
                 list-style: none;
 
                 .a {
-                    font-family: 'Cormorant', serif;
+                    font-family: 'GrandSlang B-Side','Cormorant', serif;;
+                    font-style: italic;
                     font-weight: 500;
                     color: #000000;
                     display: block;
-                    font-size: 60px;
+                    font-size: 65px;
 
                     text-transform: uppercase;
                     text-decoration: none;
@@ -90,7 +91,7 @@
                     content: "";
                     width: 0px;
                     height: 4px;
-                    background-color: rgb(0, 207, 111);
+                    background-color: rgb(161, 241, 255);
                     position: absolute;
                     top: 50%;
                     left: -20%;
@@ -134,7 +135,7 @@
 .navegation .menu-btn:checked ~ .menu .ul {
     opacity: 1;
     transform: scale(1);
-    transition-delay: 0.1s;
+    transition-delay: 0.2s;
 }
 
 

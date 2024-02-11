@@ -1,4 +1,4 @@
-/* BREAKPOINTS */
+/* ---------------------------------------- BREAKPOINTS -----------------------------------------------*/
 
 /* BASICO */
 @mixin pc-1328px {
@@ -7,7 +7,23 @@
     }
 }
 
-/* BASICO */
+/* PERSONALIZADO */
+@mixin pc-1158px {
+    @media screen and (max-width: 1328px) {
+        @content;     
+    }
+}
+
+@mixin personalizado-622 {
+    @media screen and (max-width: 622px) {
+        @content;     
+    }
+}
+
+
+// -------------------------------------------
+
+/********* BASICO *********/
 @mixin tablet-960px {
     @media screen and (max-width: 960px) {
         @content;                       // sirve para cualquier propiedad que este dentro del "include 
@@ -21,7 +37,7 @@
     }
 }
 
-/* BASICO */
+/******** BASICO ********/
 @mixin mobile-480px  {
     @media screen and (max-width: 480px) {
         @content;     

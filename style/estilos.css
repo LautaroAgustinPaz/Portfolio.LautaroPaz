@@ -1,11 +1,16 @@
 @charset "UTF-8";
-/* BREAKPOINTS */
-/* BASICO */
-/* BASICO */
-/* COMPLETO */
+/* ---------------------------------------- BREAKPOINTS -----------------------------------------------*/
 /* BASICO */
 /* PERSONALIZADO */
+/********* BASICO *********/
+/* COMPLETO */
+/******** BASICO ********/
+/* PERSONALIZADO */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: "GrandSlang B-Side";
+  src: url(/fonts/GrandSlang-B-Side/GrandSlang-B-Side.ttf);
+}
 * {
   padding: 0;
   margin: 0;
@@ -26,7 +31,7 @@
 .navegation .menu-icon .bar {
   width: 20px;
   height: 2px;
-  background-color: rgb(0, 0, 0);
+  background-color: #0D192B;
   display: block;
   position: relative;
   transition: all 0.3s ease-out;
@@ -35,7 +40,7 @@
   content: "";
   width: 28px;
   height: 2px;
-  background-color: rgb(0, 0, 0);
+  background-color: #0D192B;
   position: absolute;
   top: -8px;
   left: 0;
@@ -45,7 +50,7 @@
   content: "";
   width: 28px;
   height: 2px;
-  background-color: rgb(0, 0, 0);
+  background-color: #0D192B;
   position: absolute;
   top: 8px;
   left: 0;
@@ -75,11 +80,12 @@
   list-style: none;
 }
 .navegation .menu .ul .li .a {
-  font-family: "Cormorant", serif;
+  font-family: "GrandSlang B-Side", "Cormorant", serif;
+  font-style: italic;
   font-weight: 500;
   color: #000000;
   display: block;
-  font-size: 60px;
+  font-size: 65px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -90,7 +96,7 @@
   content: "";
   width: 0px;
   height: 4px;
-  background-color: rgb(0, 207, 111);
+  background-color: rgb(161, 241, 255);
   position: absolute;
   top: 50%;
   left: -20%;
@@ -124,7 +130,7 @@
 .navegation .menu-btn:checked ~ .menu .ul {
   opacity: 1;
   transform: scale(1);
-  transition-delay: 0.1s;
+  transition-delay: 0.2s;
 }
 
 .background {
@@ -144,23 +150,29 @@
   content: "";
   width: 100%;
   min-height: 100%;
-  background-color: black;
+  background-color: #0D192B;
   position: absolute; /* -> Un elemento con position: absolute se elimina del flujo normal de documentos. Se posiciona automáticamente en el punto de inicio (top-left esquina) de su elemento padre.*/
   top: 0;
   left: 0;
 }
 .background .banner-headings {
-  color: rgb(0, 0, 0);
+  color: #0D192B;
   width: 100%;
+  grid-area: banner-headings;
   display: grid;
   grid-template-columns: repeat(1fr, 12);
   grid-template-rows: 1fr;
 }
+@media screen and (max-width: 768px) {
+  .background .banner-headings {
+    grid-template-columns: repeat(1fr, 8);
+    grid-template-rows: 1fr;
+  }
+}
 .background .banner-headings .banner__h1 {
-  font-family: "Cormorant", serif;
+  font-family: "GrandSlang B-Side", "Cormorant", serif;
   font-weight: 400;
-  color: rgb(0, 0, 0);
-  font-size: 100px;
+  font-size: 120px;
   padding: 0px 20px 0px 20px;
   grid-column: 1/12;
   grid-row: 1/2;
@@ -180,7 +192,14 @@
 }
 @media screen and (max-width: 768px) {
   .background .banner-headings .banner__h1 {
-    font-size: 57px;
+    grid-column: 1/8;
+    grid-row: 1/2;
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 622px) {
+  .background .banner-headings .banner__h1 {
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -190,7 +209,7 @@
 }
 @media screen and (max-width: 395px) {
   .background .banner-headings .banner__h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 .background .banner-headings .banner__h4-fe {
@@ -216,20 +235,13 @@
 }
 @media screen and (max-width: 768px) {
   .background .banner-headings .banner__h4-fe {
-    grid-column: 4/5;
+    grid-column: 2/3;
     font-size: 20px;
   }
 }
 @media screen and (max-width: 480px) {
   .background .banner-headings .banner__h4-fe {
-    grid-column: 3/4;
-    grid-row: 2/3;
     font-size: 15px;
-  }
-}
-@media screen and (max-width: 395px) {
-  .background .banner-headings .banner__h4-fe {
-    grid-column: 4/5;
   }
 }
 .background .banner-headings .banner__h4-lp {
@@ -255,23 +267,15 @@
 }
 @media screen and (max-width: 768px) {
   .background .banner-headings .banner__h4-lp {
-    grid-column: 8/9;
+    grid-column: 6/7;
     font-size: 20px;
   }
 }
 @media screen and (max-width: 480px) {
   .background .banner-headings .banner__h4-lp {
-    grid-column: 9/10;
-    grid-row: 2/3;
     font-size: 15px;
   }
 }
-@media screen and (max-width: 395px) {
-  .background .banner-headings .banner__h4-lp {
-    grid-column: 8/9;
-  }
-}
-
 /* Keyframe animation */
 /* ----------------------------------------------
 * Generated by Animista on 2023-12-22 2:22:35
@@ -330,63 +334,93 @@
   width: 80px;
   height: 1px;
   margin-top: 11px;
-  background-color: rgb(0, 0, 0);
+  background-color: #0D192B;
 }
 .section-sobre-mi .sobre-mi__1 h5 {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: 500;
   font-style: italic;
+  color: #0D192B;
   padding-left: 13px;
 }
 .section-sobre-mi .sobre-mi__col-2-3 {
   min-height: 525px;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
 @media screen and (max-width: 960px) {
   .section-sobre-mi .sobre-mi__col-2-3 {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.7fr 1fr;
   }
 }
 .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 {
   padding-top: 80px;
   padding-left: 93px;
-  padding-right: 10px;
+  padding-bottom: 50px;
   grid-column: 1/2;
   grid-row: 1/2;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1328px) {
   .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 {
     grid-column: 1/2;
     grid-row: 1/2;
+    padding-right: 93px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 {
+    padding-bottom: 50px;
   }
 }
 .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 h3 {
-  padding-bottom: 25px;
+  padding-bottom: 30px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 60px;
+  color: #0D192B;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 960px) {
+  .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 h3 {
+    color: red;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 h3 {
+    font-size: 48px;
+  }
 }
 .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 h3 span {
-  font-family: "Cormorant", serif;
-  font-weight: 700;
-  font-size: 48px;
+  font-family: "GrandSlang B-Side", "Cormorant", serif;
+  font-weight: 200;
+  font-size: 60px;
   font-style: italic;
-  color: rgb(0, 133, 82);
+  color: #0D192B;
+}
+@media screen and (max-width: 480px) {
+  .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 h3 span {
+    font-size: 48px;
+  }
 }
 .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 p {
   font-family: "DM Sans", sans-serif;
   font-size: 20px;
+  color: #0D192B;
+}
+@media screen and (max-width: 960px) {
+  .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__2 p {
+    font-size: 20px;
+  }
 }
 .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__3 {
-  display: flex;
-  align-content: center;
-  justify-content: center;
+  border-radius: 30px 0px 0px 0px;
   grid-column: 2/3;
   grid-row: 1/2;
+  background-color: rebeccapurple;
 }
 @media screen and (max-width: 960px) {
   .section-sobre-mi .sobre-mi__col-2-3 .sobre-mi__3 {
